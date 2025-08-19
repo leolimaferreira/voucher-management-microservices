@@ -1,3 +1,6 @@
 [submodule "common-library"]
 	path = common-library
 	url = https://github.com/leolimaferreira/common-library.git
+[submodule "user-service"]
+	path = user-service
+	url = https://github.com/leolimaferreira/user-service.git
