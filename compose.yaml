@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  users-db:
+    image: postgres:16.3
+    container_name: voucher-users-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: users_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./init/users-init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - voucher-management-network
+
+  certifications-db:
+    image: postgres:16.3
+    container_name: voucher-certifications-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: certifications_db
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./init/certifications-init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - voucher-management-network
+
+  vouchers-db:
+    image: postgres:16.3
+    container_name: voucher-vouchers-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: vouchers_db
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./init/vouchers-init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - voucher-management-network
+
+  pgadmin:
+    image: dpage/pgadmin4:8.9
+    container_name: pgadmin4-vouchers-management
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@admin.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "15432:80"
+    networks:
+      - voucher-management-network
+
+networks:
+  voucher-management-network:
