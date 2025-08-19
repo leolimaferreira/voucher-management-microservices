@@ -4,3 +4,6 @@
 [submodule "user-service"]
 	path = user-service
 	url = https://github.com/leolimaferreira/user-service.git
+[submodule "eureka-server"]
+	path = eureka-server
+	url = https://github.com/leolimaferreira/eureka-server.git
