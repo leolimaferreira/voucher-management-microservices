@@ -1,9 +1,15 @@
 [submodule "common-library"]
 	path = common-library
 	url = https://github.com/leolimaferreira/common-library.git
-[submodule "user-service"]
-	path = user-service
-	url = https://github.com/leolimaferreira/user-service.git
 [submodule "eureka-server"]
 	path = eureka-server
 	url = https://github.com/leolimaferreira/eureka-server.git
+[submodule "certification-service"]
+	path = certification-service
+	url = https://github.com/leolimaferreira/certification-service.git
+[submodule "voucher-service"]
+	path = voucher-service
+	url = https://github.com/leolimaferreira/voucher-service.git
+[submodule "userservice"]
+	path = userservice
+	url = https://github.com/leolimaferreira/user-service.git
