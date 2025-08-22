@@ -2,8 +2,11 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/certification-service" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/common-library" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/eureka-server" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/user-service" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/userservice" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/voucher-service" vcs="Git" />
   </component>
 </project>
